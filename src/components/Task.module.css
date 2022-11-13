@@ -1,0 +1,92 @@
+.task {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+
+  background-color: var(--gray-500);
+
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  padding: 1.25rem;
+
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.task .taskState {
+  display: flex;
+  gap: 12px;
+}
+
+.task .taskState label {
+  font-size: 0.875rem;
+}
+
+.task button {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  
+  border: 0;
+  border-radius: 4px;
+
+  font-size: 0;
+  color: var(--gray-300);
+
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.task button:hover {
+  background-color: var(--gray-400);
+
+  color: var(--danger);
+}
+
+.checkboxWrapper input {
+  -webkit-appearance: none;
+  appearance: none;
+
+  background-color: transparent;
+
+  width: 1.125rem;
+  height: 1.125rem;
+
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.checkboxWrapper input:hover {
+  background-color: rgba(30, 112, 159, 0.2);
+
+  border-color: var(--blue-dark);
+}
+
+.checkboxWrapper input:checked {
+  background-color: var(--purple-dark);
+  background-image: url("../assets/icon-check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-color: var(--purple-dark);
+}
+
+.checkboxWrapper input:checked:hover {
+  background-color: var(--purple);
+
+  border-color: var(--purple);
+}
+
+.checkboxWrapper input:focus {
+  outline: transparent;
+  box-shadow: none;
+}
